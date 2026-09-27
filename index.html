@@ -3,94 +3,165 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tendercraft — links</title>
+  <title>Tendercraft — Sensory & Routine Printables</title>
   <style>
     :root {
       --bg: #faf7f2;
-      --ink: #1a2421;
-      --muted: #7a8a84;
-      --teal: #0b4f42;
-      --teal-soft: #dcefe8;
-      --warm: #8b3a1f;
-      --warm-soft: #f7e8e1;
-      --line: #e4ddd3;
+      --card-bg: #ffffff;
+      --ink: #2d2621;
+      --sub: #7a7067;
+      --teal: #1d5c52;
+      --coral: #c86348;
+      --line: #ede6dc;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      background: radial-gradient(ellipse at top, var(--teal-soft), transparent 55%), var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
       color: var(--ink);
-      min-height: 100vh;
-      line-height: 1.45;
+      padding: 32px 16px 48px;
+      display: flex;
+      justify-content: center;
     }
-    .wrap { max-width: 420px; margin: 0 auto; padding: 36px 18px 48px; }
-    .mark {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: var(--teal); margin: 0 auto 14px;
-      box-shadow: inset 0 0 0 10px var(--teal-soft);
+    .wrap {
+      width: 100%;
+      max-width: 440px;
     }
-    h1 { font-family: Georgia, serif; font-size: 1.6rem; text-align: center; margin: 0 0 6px; }
-    .sub { text-align: center; color: var(--muted); font-size: 0.95rem; margin: 0 0 28px; }
-    a.card {
+    .profile {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .brand-mark {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0 0 4px;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    p.sub {
+      margin: 0;
+      font-size: 14px;
+      color: var(--sub);
+      line-height: 1.4;
+    }
+    .card {
       display: block;
-      background: #fff;
+      background: var(--card-bg);
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 14px;
       padding: 16px 18px;
       margin-bottom: 12px;
       text-decoration: none;
       color: inherit;
+      position: relative;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 2px 6px rgba(45,38,33,0.04);
     }
-    a.card:hover { border-color: var(--teal); }
-    a.card.pro { background: var(--warm-soft); border-color: #e8cfc3; }
-    .title { font-weight: 700; margin-bottom: 4px; }
-    .meta { font-size: 0.85rem; color: var(--muted); }
-    .price { float: right; font-weight: 700; color: var(--teal); }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(45,38,33,0.08);
+    }
+    .card.pro {
+      border-color: var(--teal);
+      background: #f2f8f6;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+    .card.pro .title {
+      color: var(--teal);
+    }
+    .meta {
+      font-size: 13px;
+      color: var(--sub);
+    }
+    .price {
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--coral);
+    }
+    .card.pro .price {
+      color: var(--teal);
+    }
     footer {
       text-align: center;
-      color: var(--muted);
-      font-size: 0.78rem;
-      margin-top: 28px;
+      margin-top: 36px;
+      font-size: 12px;
+      color: var(--sub);
+      line-height: 1.6;
     }
-    footer a { color: inherit; }
+    footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="mark"></div>
-    <h1>Tendercraft</h1>
-    <p class="sub">Tenderprints visual supports · PlainLetter</p>
+    <div class="profile">
+      <div class="brand-mark">T</div>
+      <h1>Tendercraft</h1>
+      <p class="sub">Tenderprints sensory routines & social story kits</p>
+    </div>
 
-    <a class="card" href="https://pixelgrit.gumroad.com/l/bedtime-first-then">
+    <!-- Haircut Survival Kit -->
+    <a class="card" href="https://pixelgrit.gumroad.com/l/haircut-social-story">
       <span class="price">$12</span>
-      <div class="title">Bedtime First-Then Pack</div>
-      <div class="meta">Board + 8 picture cards · printable PDF</div>
+      <div class="title">✂️ Haircut Survival Kit</div>
+      <div class="meta">8-step story + First-Then board + coping cards</div>
     </a>
 
-    <a class="card" href="https://pixelgrit.gumroad.com/l/morning-first-then">
-      <span class="price">$9</span>
-      <div class="title">Morning First-Then Pack</div>
-      <div class="meta">Board + 6 cards + Home stop card</div>
-    </a>
-
+    <!-- Dentist Survival Kit -->
     <a class="card" href="https://pixelgrit.gumroad.com/l/dentist-social-story">
       <span class="price">$12</span>
-      <div class="title">Dentist Visit Social Story</div>
-      <div class="meta">4-step story + chair-side cards</div>
+      <div class="title">🦷 Dentist Visit Social Story</div>
+      <div class="meta">Spaceship chair adventure + 4 chair-side cards</div>
     </a>
 
+    <!-- Bedtime Survival Kit -->
+    <a class="card" href="https://pixelgrit.gumroad.com/l/bedtime-first-then">
+      <span class="price">$12</span>
+      <div class="title">🌙 Bedtime Survival Kit</div>
+      <div class="meta">Sleepy time story + routine board & tokens</div>
+    </a>
+
+    <!-- Morning Pack -->
+    <a class="card" href="https://pixelgrit.gumroad.com/l/morning-first-then">
+      <span class="price">$9</span>
+      <div class="title">☀️ Morning First-Then Pack</div>
+      <div class="meta">Board + 6 cards + out the door routine</div>
+    </a>
+
+    <!-- PlainLetter Pro SaaS -->
     <a class="card pro" href="https://pixelgrit.gumroad.com/l/plainletter-pro">
       <span class="price">$6/mo</span>
-      <div class="title">PlainLetter Pro</div>
+      <div class="title">✨ PlainLetter Pro (AI App)</div>
       <div class="meta">Scary paperwork → plain English + 3 actions</div>
     </a>
 
     <footer>
       Built and supported by Tendercraft<br />
-      <a href="https://tendercrafthq.com">tendercrafthq.com</a>
-      · hello@tendercrafthq.com
-      · +234 704 367 0001
+      <a href="https://tendercraft-bio.vercel.app">tendercraft-bio.vercel.app</a>
+      · Accessible Life Admin Tools
     </footer>
   </div>
 </body>
