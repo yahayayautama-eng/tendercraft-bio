@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="p:domain_verify" content="b89a6c94943ea8738ca536b28cd65a78" />
   <title>Tendercraft — Sensory & Routine Printables</title>
   <style>
     :root {
@@ -13,6 +14,7 @@
       --teal: #1d5c52;
       --coral: #c86348;
       --line: #ede6dc;
+      --green: #2e7d32;
     }
     * { box-sizing: border-box; }
     body {
@@ -26,11 +28,11 @@
     }
     .wrap {
       width: 100%;
-      max-width: 440px;
+      max-width: 460px;
     }
     .profile {
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
     .brand-mark {
       width: 68px;
@@ -44,18 +46,20 @@
       font-size: 26px;
       font-weight: 700;
       margin-bottom: 12px;
+      box-shadow: 0 4px 12px rgba(29,92,82,0.18);
     }
     h1 {
-      margin: 0 0 4px;
-      font-size: 21px;
+      margin: 0 0 6px;
+      font-size: 22px;
       font-weight: 700;
       color: var(--ink);
+      letter-spacing: -0.3px;
     }
     p.sub {
       margin: 0;
       font-size: 14px;
       color: var(--sub);
-      line-height: 1.4;
+      line-height: 1.45;
     }
     .card {
       display: block;
@@ -72,17 +76,51 @@
     }
     .card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(45,38,33,0.08);
+      box-shadow: 0 6px 16px rgba(45,38,33,0.09);
+    }
+    .card.hero {
+      border: 2px solid var(--green);
+      background: #f8fbf8;
+    }
+    .card.bundle {
+      border: 2px solid var(--coral);
+      background: #fffdfb;
+      box-shadow: 0 4px 14px rgba(200,99,72,0.08);
     }
     .card.pro {
       border-color: var(--teal);
       background: #f2f8f6;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+    .badge-free {
+      background: #e8f5e9;
+      color: var(--green);
+    }
+    .badge-bundle {
+      background: #fbe9e7;
+      color: var(--coral);
     }
     .title {
       font-weight: 700;
       font-size: 15px;
       margin-bottom: 4px;
       color: var(--ink);
+      padding-right: 60px;
+    }
+    .card.hero .title {
+      color: var(--green);
+    }
+    .card.bundle .title {
+      color: var(--coral);
     }
     .card.pro .title {
       color: var(--teal);
@@ -90,6 +128,8 @@
     .meta {
       font-size: 13px;
       color: var(--sub);
+      line-height: 1.4;
+      padding-right: 50px;
     }
     .price {
       position: absolute;
@@ -98,9 +138,36 @@
       font-weight: 700;
       font-size: 14px;
       color: var(--coral);
+      text-align: right;
+    }
+    .card.hero .price {
+      color: var(--green);
+      font-size: 15px;
+      font-weight: 800;
+    }
+    .card.bundle .price {
+      color: var(--coral);
+      font-size: 16px;
+      font-weight: 800;
     }
     .card.pro .price {
       color: var(--teal);
+    }
+    .old-price {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      text-decoration: line-through;
+      color: var(--sub);
+      margin-bottom: 1px;
+    }
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--sub);
+      margin: 22px 4px 10px;
     }
     footer {
       text-align: center;
@@ -120,14 +187,35 @@
     <div class="profile">
       <div class="brand-mark">T</div>
       <h1>Tendercraft</h1>
-      <p class="sub">Tenderprints sensory routines & social story kits</p>
+      <p class="sub">Tenderprints sensory routines & social story kits for calm transitions</p>
     </div>
+
+    <!-- 1. FREE LEAD MAGNET -->
+    <a class="card hero" href="https://pixelgrit.gumroad.com/l/vcpjpi">
+      <span class="price">FREE</span>
+      <span class="badge badge-free">🎁 Free Download</span>
+      <div class="title">Free First-Then Routine Starter Kit</div>
+      <div class="meta">Printable visual board + routine starter cards for gentle daily transitions</div>
+    </a>
+
+    <!-- 2. MASTER 4-IN-1 BUNDLE -->
+    <a class="card bundle" href="https://pixelgrit.gumroad.com/l/dpetsq">
+      <div class="price">
+        <span class="old-price">$45</span>
+        $27
+      </div>
+      <span class="badge badge-bundle">⭐ Best Value · Save 40%</span>
+      <div class="title">Complete Calming Routines & Social Stories Kit</div>
+      <div class="meta">All 4 packs: Bedtime + Morning + Dentist + Haircut Social Stories & Visual Boards</div>
+    </a>
+
+    <div class="section-title">Individual Survival Packs</div>
 
     <!-- Haircut Survival Kit -->
     <a class="card" href="https://pixelgrit.gumroad.com/l/haircut-social-story">
       <span class="price">$12</span>
       <div class="title">✂️ Haircut Survival Kit</div>
-      <div class="meta">8-step story + First-Then board + coping cards</div>
+      <div class="meta">8-step story + First-Then board + sensory coping cards</div>
     </a>
 
     <!-- Dentist Survival Kit -->
@@ -141,21 +229,23 @@
     <a class="card" href="https://pixelgrit.gumroad.com/l/bedtime-first-then">
       <span class="price">$12</span>
       <div class="title">🌙 Bedtime Survival Kit</div>
-      <div class="meta">Sleepy time story + routine board & tokens</div>
+      <div class="meta">Sleepy time story + routine board & visual tokens</div>
     </a>
 
     <!-- Morning Pack -->
     <a class="card" href="https://pixelgrit.gumroad.com/l/morning-first-then">
       <span class="price">$9</span>
       <div class="title">☀️ Morning First-Then Pack</div>
-      <div class="meta">Board + 6 cards + out the door routine</div>
+      <div class="meta">Visual board + 6 cards + calm out-the-door routine</div>
     </a>
+
+    <div class="section-title">Software Tools</div>
 
     <!-- PlainLetter Pro SaaS -->
     <a class="card pro" href="https://pixelgrit.gumroad.com/l/plainletter-pro">
       <span class="price">$6/mo</span>
       <div class="title">✨ PlainLetter Pro (AI App)</div>
-      <div class="meta">Scary paperwork → plain English + 3 actions</div>
+      <div class="meta">Scary paperwork & IEPs → plain English + 3 clear next actions</div>
     </a>
 
     <footer>
